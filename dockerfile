@@ -1,3 +1,6 @@
 FROM python:3
-ADD main.py /
-CMD [ "python", "./main.py" ]
+ADD Code.py /
+RUN pip install dnspython
+RUN pip install pymongo
+RUN pip install requests
+CMD [ "python", "./Code.py" ]
